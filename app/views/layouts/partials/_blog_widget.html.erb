@@ -1,0 +1,36 @@
+<div id="blog-info">
+  <div id="bi-title">
+    BLOG
+  </div>
+  <div class='subtitle'>
+    ÚLTIMAS PUBLICACIÓNES
+  </div>
+  <div id=posts-container-wrapper>
+    <div id='posts-container'>
+      <% blog_posts.each do |bp| %>
+      <div class='blog-post'>
+        <div class='bp-date'>
+          <div class='bp-date-day'>
+            <%= l(bp["date"].to_date, format: '%d') %>
+          </div>
+          <div class='bp-date-month'>
+            <%= l(bp["date"].to_date, format: '%B').first(3) %>
+          </div>
+        </div>
+        <div class="date-edge"></div>
+        <div class='bp-title'>
+          <%= bp["title"] %>
+        </div>
+        <br>
+        <div class="link-wrapper">
+          <%= link_to bp["url"], target: '_blank' do %>
+          LEER
+          <i class="fa fa-eye"></i>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+      <% end %>
+    </div>
+  </div>
+</div>

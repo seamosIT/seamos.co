@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Shelby Massey",
+    "party": "Partido Fresa",
+    "background_class": "dp_one",
+    "production_id": 2
+  },
+  {
+    "name": "Adyan Wilks",
+    "party": "Partido Mora",
+    "background_class": "dp_two",
+    "production_id": 2
+  },
+  {
+    "name": "Daisie Spence",
+    "party": "Partido Papaya",
+    "background_class": "dp_three",
+    "production_id": 2
+  },
+  {
+    "name": "Amara Sinclair",
+    "party": "Partido Uva",
+    "background_class": "dp_four",
+    "production_id": 2
+  },
+  {
+    "name": "Clare Bray",
+    "party": "Partido Pitaya",
+    "background_class": "dp_five",
+    "production_id": 2
+  },
+  {
+    "name": "Ray Perry",
+    "party": "Partido Lulo",
+    "background_class": "dp_six",
+    "production_id": 2
+  }
+]

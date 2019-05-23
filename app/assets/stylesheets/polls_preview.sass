@@ -1,80 +1,82 @@
-#polls-component
-  h3
-    font-size: 20px
-  $break-medium: 720px
-  .background-container
-    height: 348px
-    width: 100%
-    background-repeat: no-repeat
-    display: inline-flex
-    align-items: flex-end
-    @media screen and (max-width: $break-medium)
-      height: 218px
-      font-size: 250px
-    img
-      width: 900px
-      height: 350px
-      position: absolute
-      right: 0
-      // height: 390px
-      @media screen and (max-width: $break-medium)
-        width: 100%
-        height: initial
-        // position: absolute
-        // right: 0
-    .icon-name-wrapper
-      display: flex
-      align-items: center
-      position: absolute
-      .tag-icon-container
-        width: 100px
-        .tag-icon
-          width: 100px
-          height: 100px
-      .tag-name
-        position: absolute
-        bottom: 32px
-        left: 40px
-        @media screen and (max-width: $break-medium)
-          bottom: 11px
-          left: 13px
-        h1
-          color: white
-          font-size: 60px
-          font-family: 'HKNovaBold'
-          font-weight: bold
-          margin: 0
-          text-align: left
-          @media screen and (max-width: $break-medium)
-            font-size: 25px
-            width: 90%
-  .polls-box
-    margin-top: 50px
-    width: 100%
-    display: inline-flex
-    flex-wrap: wrap
-    justify-content: left
-    align-items: left
-    padding-left: 11px
-    overflow: hidden
-    @media screen and (max-width: $break-medium)
-      margin-top: 0px
-      padding: 0 10px
-      min-height: 380px
-    .polls-wrapper
-      display: flex
-      flex-wrap: wrap
-      @media screen and (max-width: $break-medium)
-        margin: auto
-        justify-content: center
+@import './variables.scss'
+#polls-component-global-wrapper
+  background-color: #f7f7f79e
+  #polls-component
+    overflow-x: hidden
     h3
-      margin: 20px 0
+      font-size: 20px
+    .background-container
+      width: 100%
+      background-repeat: no-repeat
+      display: inline-flex
+      align-items: flex-end
       @media screen and (max-width: $break-medium)
-        margin: 57px 0 115px 0
+        font-size: 250px
+      img
+        width: 100%
+        @media screen and (max-width: $break-medium)
+          width: 100%
+      .icon-name-wrapper
+        display: flex
+        align-items: center
+        position: absolute
+        .tag-icon-container
+          width: 100px
+          .tag-icon
+            width: 100px
+            height: 100px
+        .tag-name
+          position: absolute
+          bottom: 32px
+          left: 40px
+          @media screen and (max-width: $break-medium)
+            bottom: 11px
+            left: 13px
+          h1
+            color: $red
+            font-size: 118px
+            margin-bottom: 38px
+            padding-left: 412px
+            font-family: gobol
+            @media screen and (max-width: $break-medium)
+              width: 90%
+              top: 37px
+              padding-left: 90px
+              font-size: 36px
+              position: relative
+    .polls-box
+      margin-top: 50px
+      width: 100%
+      display: inline-flex
+      flex-wrap: wrap
+      justify-content: left
+      align-items: left
+      padding: 0 60px
+      overflow: hidden
+      @media screen and (max-width: $break-medium)
+        margin-top: 20px
+        padding: 0 10px
+        min-height: 380px
+      .polls-wrapper
+        display: flex
+        flex-wrap: wrap
+        @media screen and (max-width: $break-medium)
+          width: 100%
+          margin: auto
+          justify-content: center
+      h3
+        margin: 20px 0
+        @media screen and (max-width: $break-medium)
+          margin: 57px 0 115px 0
+  .forum-row
+    background-color: #f7f7f79e
 
-.poll-link
-  &:hover
-    text-decoration: none
+  .poll-link
+    width: 50%
+    @media screen and (max-width: $break-medium)
+      width: 100%
+    &:hover
+      text-decoration: none
 
 #poll-component
   $break-medium: 720px

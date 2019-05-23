@@ -13,7 +13,7 @@ module Seamos
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://tvtd.seamos.co', 'https://seamos.co', 'http://tvtd.seamos.co', 'http://seamos.co'
+        origins 'https://seamosbuenaventura.co', 'http://seamosbuenaventura.co'
         resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :options]
       end
     end

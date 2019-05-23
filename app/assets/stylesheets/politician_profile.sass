@@ -8,9 +8,19 @@
     @media screen and (max-width: $break-medium)
       display: block
   #top-color-banner
-    height: 190px
-    background-color: #eb6157
+    height: 305px
     margin-bottom: -124px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: gobol
+    color: $red
+    font-size: 23px
+    @media screen and (max-width: $break-medium)
+      height: 60px
+      margin-top: 40px
+      margin-bottom: 0
+      font-size: 16px
   #may-interest-container
     margin-bottom: -60px
     #may-interest
@@ -49,17 +59,8 @@
         text-align: justify
     .top
       margin-bottom: 25px
+      width: 100%
       .social-info
-        .social-info-wrapper
-          p
-            margin-top: 60px
-            font-size: 19px
-            text-align: right
-            @media screen and (max-width: $break-medium)
-              width: 100%
-              text-align: center
-              font-size: 13px
-              margin-top: -8px
       .basic-info
         height: $picture-size
         @media screen and (max-width: $break-medium)
@@ -73,6 +74,32 @@
         .basic-info-wrapper
           position: absolute
           bottom: 10px
+          width: 100%
+          .bi
+            border-bottom: 1px solid gray
+            @media screen and (max-width: $break-medium)
+              border: none
+            h1
+              text-transform: uppercase
+            .social-info-wrapper
+              position: absolute
+              right: 0
+              bottom: 60px
+              @media screen and (max-width: $break-medium)
+                position: relative
+                right: unset
+                bottom: unset
+              p
+                margin-top: 60px
+                font-size: 19px
+                text-align: right
+                @media screen and (max-width: $break-medium)
+                  width: 100%
+                  text-align: center
+                  font-size: 13px
+                  margin-top: -8px
+          .party
+            text-transform: uppercase
       .picture-wrapper-wrapper
         @media screen and (max-width: $break-medium)
           display: flex
@@ -85,6 +112,7 @@
           justify-content: center
           border-radius: 50%
           overflow: hidden
+          border: 2px solid $yellow
           img
             height: $picture-size
     .mid
@@ -97,7 +125,6 @@
       .cv-title
         height: 46px
         background-color: #eaeaea
-        border: 2px solid #5a5861
         border-radius: 14px
         display: flex
         font-family: 'RobotoRegular'
@@ -106,14 +133,19 @@
         display: flex
         align-items: center
         padding-left: 20px
+        text-transform: uppercase
+        justify-content: center
       .cv-subtitle
         font-family: 'RobotoRegular'
-        font-size: 23px
-        border-bottom: 1px solid gray
+        font-size: 18px
+        border-top: 1px solid gray
         padding: 12px 0 0 0
+        text-transform: uppercase
         font-weight: bold
         color: #44434c
         line-height: 1.1em
+        &:first-child
+          border-top: none
       .further-studies
         padding: 10px
         color: #44434c
@@ -121,6 +153,8 @@
           font-size: 19px
           font-family: 'RobotoRegular'
           border-bottom: 1px solid gray
+          &:last-child
+            border-bottom: none
           div
             margin: 12px 0 12px 0
         .academic-title:nth-child(3)
@@ -164,6 +198,7 @@
         font-size: 20px
         justify-content: flex-start
         color: #44434c
+        font-weight: normal
       h2
         @media screen and (max-width: $break-medium)
           text-align: center

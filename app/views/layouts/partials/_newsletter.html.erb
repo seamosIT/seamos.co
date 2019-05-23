@@ -1,0 +1,15 @@
+<div id="homepage" class="flex-container">
+  <div class="newsletter-container">
+    <div class="title">Suscríbete a nuestro Boletín informativo</div>
+    <div class="newsletter">
+      <%= form_for(Subscription.new) do |form| %>
+      <div class="input-group">
+        <%= form.text_field :email, class: "form-control", placeholder: "correo" %>
+        <span class="input-group-btn">
+          <%= form.button "ENVIAR", class: "btn btn-secondary", type: 'submit'%>
+        </span>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

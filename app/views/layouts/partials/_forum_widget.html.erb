@@ -1,0 +1,35 @@
+
+<div class="MultiCarousel hh" data-items="1,3,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
+  <div class="MultiCarousel-inner">
+    <% discussions.each do |discussion| %>
+    <div class="item">
+      <div class="pad15 single-on-mobile">
+        <p class="lead"><%= discussion.title %></p>
+        <%= link_to simple_discussion.forum_thread_path(discussion), class: 'discussion-link' do %>
+          Leer
+          <i class="fa fa-eye"></i>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <% 4.times do %>
+      <div class="item">
+        <div class="pad15 disabled">
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <button class="leftLst hh">
+<<<<<<< HEAD
+    <%= image_tag  "b-card-carousel-handlers-l", class: 'rightLST' %>
+  </button>
+  <button class="rightLst hh">
+    <%= image_tag  "b-card-carousel-handlers-r", class: 'rightLST' %>
+=======
+    <%= image_tag  "b-card-carousel-handlers-l.png", class: 'rightLST' %>
+  </button>
+  <button class="rightLst hh">
+    <%= image_tag  "b-card-carousel-handlers-r.png", class: 'rightLST' %>
+>>>>>>> 1ba56361c5dfee263c147d37a1a8ccfd3a0a4242
+  <button>
+</div>

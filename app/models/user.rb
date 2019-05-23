@@ -57,27 +57,33 @@ class User < ApplicationRecord
 
   enum role_type: {ciudadano: 0, politico: 1, administrador: 2}
   enum current_corporation_commission: {"Comisión del plan": 0, "Comisión de Gobierno": 1, "Comisión de Hacienda": 2}
-  enum localitie: { "Usaquén": 0,
-                  "Chapinero": 1,
-                  "Santa Fe": 2,
-                  "San Cristóbal": 3,
-                  "Usme": 4,
-                  "Tunjuelito":5,
-                  "Bosa": 6,
-                  "Kennedy": 7,
-                  "Fontibón": 8,
-                  "Engativá": 9,
-                  "Suba": 10,
-                  "Barrios Unidos": 11,
-                  "Teusaquillo": 12,
-                  "Los Mártires": 13,
-                  "Antonio Nariño": 14,
-                  "Puente Aranda": 15,
-                  "La Candelaria": 16,
-                  "Rafael Uribe Uribe": 17,
-                  "Ciudad Bolívar": 18,
-                  "Sumapaz": 19,
-                  }
+  enum localitie: {
+    "Barcos": 0,
+    "Bocas del San Juan": 1,
+    "Calle Honda": 2,
+    "El Carmen": 3,
+    "Cisneros": 4,
+    "El Patico": 5,
+    "El Tigre": 6,
+    "Gamboa": 7,
+    "Guadualito": 8,
+    "Kilómetro 43 o la Triana": 9,
+    "La Trojita": 10,
+    "Mayorquín": 11,
+    "Nicolás Ramos Hidalgo": 12,
+    "Potedó": 13,
+    "San Antonio de Yurumanguí": 14,
+    "San Isidro": 15,
+    "San Lorenzo": 16,
+    "San Pedro de Naya": 17,
+    "Silva y Taparal.": 18
+  }
+
+
+
+
+
+
 
   scope :by_role_type, -> (role_type) do
     self.role_types.keys.include?(role_type) ?  where(role_type: role_type) : where(role_type: nil)

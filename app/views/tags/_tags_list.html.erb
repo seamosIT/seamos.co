@@ -2,7 +2,7 @@
   <div class="flex-container tags-box">
     <% tags.each do |tag| %>
       <%= link_to  tag_path(tag) do %>
-        <div id="<%= tag.id %>" class="tag-component" style="background-image: url('<%= tag.thumbnail.url %>'); background-color: <%= tag.tag_color %>" user_id="<%= current_user.id if current_user %>">
+        <div id="<%= tag.id %>" class="tag-component" style="background-image: url('<%= tag.thumbnail.url %>');" user_id="<%= current_user.id if current_user %>">
           <% if params[:controller] == 'users' && params[:action] == 'show' %>
             <div class="tag tag-selected <%= @interests.pluck(:tag_id).include?(tag.id) ? '' : 'hidden'%>">
               <span class="fa fa-check-circle"></span>

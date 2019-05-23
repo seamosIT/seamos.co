@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="MultiCarousel hh" data-items="2,4,6,7" data-slide="1" id="MultiCarousel" data-interval="1000">
+    <div class="MultiCarousel-inner">
+      <%if tags.present? %>
+        <% tags.each do |tag| %>
+        <div class="item">
+          <div class="pad15">
+            <%= link_to tag_path(tag) do %>
+              <%= image_tag tag.thumbnail.url %>
+              <p class="lead"><%= tag.name %></p>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+        <% 7.times do %>
+          <div class="item">
+            <div class="pad15 disabled">
+              <%= image_tag tags.first.thumbnail.url, style: "visibility: hidden" %>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <% 10.times do %>
+          <div class="item">
+            <div class="pad15 disabled">
+
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <button class="leftLst hh">
+<<<<<<< HEAD
+      <%= image_tag  "b-card-carousel-handlers-l", class: 'rightLST' %>
+    </button>
+    <button class="rightLst hh">
+      <%= image_tag  "b-card-carousel-handlers-r", class: 'rightLST' %>
+=======
+      <%= image_tag  "b-card-carousel-handlers-l.png", class: 'rightLST' %>
+    </button>
+    <button class="rightLst hh">
+      <%= image_tag  "b-card-carousel-handlers-r.png", class: 'rightLST' %>
+>>>>>>> 1ba56361c5dfee263c147d37a1a8ccfd3a0a4242
+    <button>
+  </div>
+</div>

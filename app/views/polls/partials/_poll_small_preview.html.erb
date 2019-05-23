@@ -1,7 +1,7 @@
 <%= link_to poll_path(poll), class: 'poll-link' do %>
   <div id="global-container">
     <div id="other-poll-component">
-      <div class="left-side col-4 col-md-4 no-padding">
+      <div class="left-side col-12 col-md-4 no-padding">
         <div class="poll-image-container">
           <%= image_tag poll.poll_image %>
         </div>
@@ -9,27 +9,30 @@
           <div class="closed-ribbon"></div>
         <% end %>
       </div>
-      <div class="right-side col-8 col-md-8">
-        <div class="poll-title">
-          <span>
+      <div class="right-side col-12 col-md-8">
+        <div class='poll-main-info'>
+          <span class="poll-title">
             <%= poll.title %>
           </span>
+          <div class="poll-summary">
+            <p>
+              <%= poll.summary %>
+            </p>
+          </div>
           <div class="diffuse"></div>
         </div>
         <div class="poll-infos-container">
           <div class="poll-details">
-            <div class="poll-tag-name" style="width: <%= poll.closed? ? '50%' : '65%' %>;">
-              <%= poll.tag_name %>
+            <div class="poll-tag-name">
               <div class='extra-info'>
-                <span> Apertura: <%= l(poll.created_at, format: '%b de %Y')  %> </span>
-                  <br/>
-                <span> Cierre: <%= l(poll.closing_date, format: '%b de %Y')  %> </span>
-                <div class='spacer-small'></div>
+                <span> <%= poll.vote_count %> votos</span>
+                <span class="color-separator" style="border-left: 2px solid gray"> &nbsp</span>
+                <span> Quedan <%= distance_of_time_in_words(Date.today, Date.today + poll.remaining_time_in_seconds.seconds) %> </span>
               </div>
             </div>
-            <div class="color-separator" style="border-left: 5px solid <%= poll.tag_color %>"></div>
-            <div class="btn button btn-plus-read" style="background-color: <%= poll.tag_color %>">
-              <%= poll.closed? ? 'RESULTADOS' : 'VOTA' %>
+            <div class="btn button">
+              Leer
+              <i class="fa fa-circle"></i>
             </div>
           </div>
         </div>

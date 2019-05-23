@@ -1,8 +1,11 @@
 {
+  "emmet.includeLanguages": { "erb":"html" },
   "workbench.colorCustomizations": {
     "editorIndentGuide.activeBackground": "#10f1d3",
-    "activityBar.background": "#442621",
-    "titleBar.activeBackground": "#5F352F",
+    "activityBar.background": "#56535f",
+    "titleBar.activeBackground": "#e2d300",
     "titleBar.activeForeground": "#FCFAF9"
-  }
+  },
+  "highlight-matching-tag.highlightFromContent": true,
+  "highlight-matching-tag.highlightSelfClosing": true
 }

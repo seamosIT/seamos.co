@@ -1,0 +1,11 @@
+<div class="politicians col-12">
+  <% politicians.each do |politician| %>
+    <%= link_to politician_profile_path(politician["production_id"]), class: 'politician-link' do %>
+      <div class="politician <%= politician["background_class"] %>">
+        <div class="photo"></div>
+        <div class="name"><%= politician["name"] %></div>
+        <div class="organization"><%= politician["party"] %></div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

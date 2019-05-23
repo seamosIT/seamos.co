@@ -5,10 +5,12 @@ class TagsController < ApplicationController
   def index
     @location_from = ''
     @tags = Tag.joins(:polls).where(polls: {active: true}).uniq
+    # @tags = Tag.all
   end
 
   def show
     @polls = @tag.polls.active.includes([:votes, :user])
+    @discussions = ForumThread.last(30)
   end
 
   private

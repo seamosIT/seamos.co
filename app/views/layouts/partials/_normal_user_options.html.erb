@@ -1,5 +1,8 @@
 <nav>
   <li>
+    <%= link_to  "TEMAS", root_path(anchor: 'tvtd') %>
+  </li>
+  <li>
     <a href="http://sifuerapresidente.co" target="_blank" rel="noopener noreferrer"> SIFUERAPRESIDENTE </a>
   </li>
   <li id="this" class="hide-on-mobile">
@@ -9,13 +12,10 @@
     <a href="https://seamosit.github.io" rel="noopener noreferrer"> BLOG</a>
   </li>
   <li>
-    <%= link_to "FORO", simple_discussion_path %>
-  </li>
-  <li>
-    <%= link_to  "TEMAS", tags_path %>
+    <%= link_to  "FORO", simple_discussion_path %>
   </li>
   <li id="politicians-link">
-    <a href="/politicians"> CONCEJALES </a>
+    <%= link_to  "CONCEJALES", root_path(anchor: 'councilors') %>
   </li>
   <% if user_signed_in? %>
     <div>

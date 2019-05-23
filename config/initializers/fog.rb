@@ -10,6 +10,6 @@ CarrierWave.configure do |config|
 
   	# config.root = Rails.root.join('tmp')
   	config.cache_dir = "#{Rails.root}/tmp/uploads"
-    config.fog_directory  = 'document-photos-seamos'
+    config.fog_directory  = 'seamosbuenaventura'
   end
 end

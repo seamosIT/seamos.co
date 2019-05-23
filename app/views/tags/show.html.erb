@@ -14,9 +14,28 @@
     <div class="polls-box">
       <div class="polls-wrapper">
         <% @polls.each do |poll| %>
-          <%= render partial: 'polls/partials/poll_preview', locals: {poll: poll} %>
+          <%= render partial: 'polls/partials/poll_small_preview', locals: {poll: poll} %>
         <% end %>
       </div>
     </div>
+
+    <!-- forum -->
+    <hr class="fading-hr">
+    <div class="spacer-mid"></div>
+    <% if @discussions.any? %>
+      <div class="row forum-row">
+        <h3>FORO SEAMOS</h3>
+        <div class="spacer-mid"></div>
+        <div class="subcontainer">
+          <div class="row">
+            <%= render partial: "layouts/partials/forum_widget", locals: {discussions: @discussions} %>
+          </div>
+          <%= render partial: "simple_discussion/forum_threads/forum_thread", locals: {forum_thread: @discussions.first} %>
+        </div>
+      </div>
+    <% end %>
+    <hr class="fading-hr">
+    <%= render partial: "layouts/partials/newsletter" %>
+
   </section>
 </div>

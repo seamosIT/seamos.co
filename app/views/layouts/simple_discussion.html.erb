@@ -1,4 +1,15 @@
+<div class="row">
+  <div class="col-12 f-main-banner">
+    <div class="title">
+      <h1>
+        FORO SEAMOS
+      </h1>
+    </div>
+  </div>
+</div>
 <div class="row simple_discussion">
+  <%= render partial: "layouts/partials/forum_widget", locals: { discussions: ForumThread.last(30) } %>
+  <div class="spacer-mid"></div>
   <div class="col-md-3 mb-3">
     <%= render partial: 'layouts/modals/sign_in_modal' %>
     <div class="card card-body">
@@ -125,11 +136,12 @@
 
   <div class="col-md-9 mb-3">
 
-    <div id="#right-side-container" class="card card-body">
+    <div id="right-side-container" class="card card-body">
       <%= yield %>
     </div>
 
   </div>
 </div>
+<%= render partial: "layouts/partials/newsletter" %>
 
 <% parent_layout("application") %>

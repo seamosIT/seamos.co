@@ -8,12 +8,24 @@
   <% if current_user && current_user.administrador? %>
     <%= render partial: 'polls/partials/unactive_poll_banner', locals: {poll: @poll} %>
   <% end %>
-  <section id="poll-detail">
-    <div class="top-color-bar" style="background-color: <%= @tag.tag_color %>">
-        <div class="tag-name">
-          <%= @tag.name %>
+  <div id="polls-component-global-wrapper">
+    <section id="polls-component">
+      <div class="background-container" style="background-color: <%= @tag.tag_color %>;">
+        <%= image_tag @tag.tag_image.url %>
+        <div class="icon-name-wrapper">
+          <div class="tag-icon-container" style="display: none;"><img class="tag-icon" alt="tag icon" src="https://document-photos-seamos.s3.amazonaws.com/uploads/tag/tag_icon/2/iconos_cultura.png"></div>
+          <div class="tag-name">
+            <h1>
+              <%= @tag.name %>
+            </h1>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+  </div>
+  <div class="dots">
+  </div>
+  <section id="poll-detail">
     <div class="container">
         <section id="politician" class="row">
           <%= link_to politician_profile_path(@author.id) do %>

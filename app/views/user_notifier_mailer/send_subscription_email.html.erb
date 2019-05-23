@@ -1,5 +1,5 @@
 <% content = "<h2>Gracias por suscribirte</h2>
-    <p>Ahora recibirás las últimas noticias de seamOS.</p>
+    <p>Ahora recibirás las últimas noticias de seamOS Buenaventura.</p>
     <p>Puedes anular tu subscripción haciendo click #{link_to 'aquí', settings_unsubscribe_url(id: @unsubscribe)}. </p>"%>
 
 <%= render partial: '/devise/mailer/partials/simple.html.erb', locals: { user: @user, content: content } %>

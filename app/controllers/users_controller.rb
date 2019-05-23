@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def politician_profile
     @polls = @politician.polls.first(6)
+    @discussions = ForumThread.last(20)
   end
 
   private

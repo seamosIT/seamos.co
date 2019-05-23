@@ -1,5 +1,6 @@
 class SimpleDiscussion::ApplicationController < ::ApplicationController
   layout "simple_discussion"
+  # before_action :redirect_to_root
 
   def page_number
     page = params.fetch(:page, '').gsub(/[^0-9]/, '').to_i
@@ -32,6 +33,6 @@ class SimpleDiscussion::ApplicationController < ::ApplicationController
   private
 
   def redirect_to_root
-    redirect_to simple_discussion.root_path, alert: "You aren't allowed to do that."
+    redirect_to root_path, alert: "Foro no habilitado"
   end
 end

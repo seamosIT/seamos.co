@@ -1,11 +1,5 @@
 @import './variables'
-.forum-thread
-  .posts-counter
-    display: flex
-    justify-content: center
-    align-items: center
-    margin-top: -25px
-    font-family: RobotoRegular
+
 .forum-post
   p
     background: white !important
@@ -26,6 +20,58 @@
   font-family: RobotoRegular
   font-size: 20px
 
-.simple_discussion hr
+.simple_discussion
+  padding: 0 80px
   @media screen and (max-width: $break-medium)
-    margin: 29px -7px !important
+    padding: 5px
+  hr
+    @media screen and (max-width: $break-medium)
+      margin: 29px -7px !important
+  #right-side-container
+    padding-top: 0
+    border: none
+  .forum-thread
+    margin-bottom: -20px
+    border: 1px solid gainsboro
+    padding: 10px
+    border-radius: 15px
+    h4
+      text-transform: uppercase
+      a
+        color: #c90d0d
+        font-size: 19px
+        font-weight: bold
+    .posts-counter
+      display: flex
+      align-items: flex-start
+      margin-top: unset
+      color: black
+      font-family: RobotoRegular
+      position: relative
+      right: 10px
+      .count
+        font-size: 40px
+        color: black
+      small
+        color: black
+  .MultiCarousel.hh
+    border-left: 20px solid white
+    border-right: 20px solid white
+.f-main-banner
+  background-color: #f5e9d1
+  height: 300px
+  display: flex
+  justify-content: center
+  align-items: center
+  @media screen and (max-width: $break-medium)
+    height: 150px
+  .title
+    width: 100%
+    text-align: center
+    h1
+      font-family: gobol
+      font-size: 80px
+      color: $red
+      margin-bottom: 0
+      @media screen and (max-width: $break-medium)
+        font-size: 50px

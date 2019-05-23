@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
 
   def politicians
-    @politicians = JSON.parse(File.read("app/helpers/politicians.json"))
+    @politicians = if (Rails.env.staging? || Rails.env.development?)
+      JSON.parse(File.read("app/helpers/dummy-politicians.json"))
+    elsif Rails.env.production?
+      JSON.parse(File.read("app/helpers/politicians.json"))
+    end
   end
 
   def terms
