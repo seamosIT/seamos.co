@@ -1,204 +1,142 @@
 <!-- prehome page -->
 <span style="overflow: visible;">
-  <div id="prehomepage">
-    <div class='row'>
-      <div class='col-md-2 col-12 zi-10 hide-on-mobile'>
-        <%= render partial: "layouts/partials/blog_widget", locals: { blog_posts: @blog_posts } %>
+  <div id="prehomepage" class="flex-container">
+    <div class='spacer-mid'></div>
+    <section class="image-buttons-container">
+      <div class="title">
+        <h3>NUESTROS PROYECTOS</h3>
       </div>
-      <!-- bootstrap carousel -->
-      <div class='col-md-10 col-12'>
-        <div id="main-banner" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <%= image_tag "buenaventura-banner.png" %>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag "buenaventura-banner.png" %>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#main-banner" role="button" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#main-banner" role="button" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-      <div class='col-md-2 col-12 hide-on-desktop'>
-        <%= render partial: "layouts/partials/blog_widget", locals: { blog_posts: @blog_posts } %>
-      </div>
-    </div>
-    <!-- cómo logramos el cambio -->
-    <div class="row">
-      <div class="spacer-big"></div>
-      <div class="subcontainer">
-        <div class="how">
-          <h3>¿CÓMO LOGRAMOS EL CAMBIO?</h3>
-        </div>
-        <div class="spacer-small"></div>
-        <p class='p-how'>
-          La plataforma SeamOS es un canal entre la ciudadanía y los políticos en ejercicio para generar
-          un diálogo con ellos y hacer valer la representación democrática que les otorgamos con nuestro voto.
-        </p>
-      </div>
-    </div>
-    <div class="subcontainer">
-      <div class="row">
-        <div class="info col-12 col-md-3">
-          <div class="head">
-            <div class="icon explore">
-            </div>
-            <h3 class="title">Explora</h3>
-          </div>
-          <div class="description">
-            Las propuestas publicadas según los ejes temáticos de tu interés
-          </div>
-        </div>
-        <div class="info col-12 col-md-3">
-          <div class="head">
-            <div class="icon registry">
-            </div>
-            <h3 class="title">Regístrate</h3>
-          </div>
-          <div class="description">
-            En la plataforma para que puedas votar e incidir en la toma de decisiones
-          </div>
-        </div>
-        <div class="info col-12 col-md-3">
-          <div class="head">
-            <div class="icon participate">
-            </div>
-            <h3 class="title">Participa</h3>
-          </div>
-          <div class="description">
-            Informate y vota las propuestas de los concejales que se sumaron a nuestra plataforma
-          </div>
-        </div>
-        <div class="info col-12 col-md-3">
-          <div class="head">
-            <div class="icon name">
-            </div>
-            <h3 class="title">Representa</h3>
-          </div>
-          <div class="description">
-            Tu participación ciudadana puede hacer que consigas reconocimientos
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- tu votas tu decides -->
-    <div id='tvtd'  class="row precontainer">
-      <h1 class="title">TÚ VOTAS, TÚ DECIDES</h1>
-      <p class="subtitle">Temas que le interesan a la comunidad</p>
-      <div class="tags-cards-container subcontainer">
-        <%= render partial: "layouts/partials/tags_widget", locals: {tags: @tags} %>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- forum -->
-    <% if @discussions.any? %>
-      <div class="row forum-row">
-        <div class="spacer-mid"></div>
-        <h3>FORO SEAMOS</h3>
-        <div class="spacer-mid"></div>
-        <div class="discussions-cards-container subcontainer">
-          <div class="row">
-            <%= render partial: "layouts/partials/forum_widget", locals: {discussions: @discussions} %>
-          </div>
-          <%= render partial: "simple_discussion/forum_threads/forum_thread", locals: {forum_thread: @discussions.first} %>
-        </div>
-        <div class="btn-container">
-          <a class="gray-fading-btn">
-            Ingresar al foro
-          </a>
-        </div>
-        <div class="spacer-mid"></div>
-      </div>
-    <% end %>
-
-    <!-- bancada -->
-
-    <div class="dots">
-    </div>
-    <div class="row" id='mid-section'>
-      <div class="subcontainer row">
-        <div class="left col-md-4">
-          <%= image_tag  "bancada-illustration.png" %>
-        </div>
-        <div class="right col-md-8">
-          <span class="b-caption">
-            <h3> ¿Qué es la bancada de la comunidad </h3>
-            <p>
-              La Bancada de la Comunidad está constituida por un grupo de concejales que decidieron adoptar prácticas de
-              innovación política y uso de tecnología, para tener una relación democrática más dinámica, cercana y horizontal
-               con la ciudadanía. Al firmar un manifiesto con el cual se comprometen a suscribir sus propuestas en
-               la plataforma, y actuar conforme a lo manifestado por los ciudadanos, Seamos podrá activar conversaciones
-               ciudadanas y fortalecer la democracia, bajo tres objetivos:
-            </p>
-            <p>
-              <strong>1.</strong> Que los políticos y políticas tengan un canal de comunicación con sus comunidades. <br>
-              <strong>2.</strong> Que la ciudadanía participe activamente y de forma informada en decisiones. <br>
-              <strong>3.</strong> Que las agendas más relevantes de la ciudadanía sean discutidas por el Concejo Distrital. <br>
-            </p>
-          </span>
-        </div>
-      </div>
-    </div>
+      <%= link_to simple_discussion_path do %>
+        <%= image_tag('foro-big-btn.png', class: 'image-btn left') %>
+      <% end %>
+      <%= link_to home_path do %>
+        <%= image_tag('concejales-btn.jpg', class: 'image-btn left') %>
+      <% end %>
+      <%= link_to "http://sifuerapresidente.co", :target => "_blank" do %>
+        <%= image_tag('sfp-btn.png', class: 'image-btn right') %>
+      <% end %>
+      <%= link_to maping_path do %>
+        <%= image_tag('mapeo.png', class: 'image-btn left') %>
+      <% end %>
+      <%= link_to digital_era_path do %>
+        <%= image_tag('pped.png', class: 'image-btn left') %>
+      <% end %>
+      <%= link_to diplomado_innovacion_politica_path do %>
+        <%= image_tag('diplomat-btn.jpg', class: 'image-btn right') %>
+      <% end %>
     </section>
-
-    <!-- politicians -->
-
-    <hr id='councilors'>
-    <% if @politicians.any? %>
-      <div id='politicians' class="subcontainer">
-        <section class="row">
-          <div class="col-12">
-            <h3>CONCEJALES</h3>
-          </div>
-          <%= render partial: "layouts/partials/politicians", locals: {politicians: @politicians} %>
-        </section>
+    <section class="mid-section-container">
+      <div class="fist">
+        <img src="https://s3.amazonaws.com/si-yo-fuera-presidente/assets/fist-2.png" alt="">
       </div>
-    <% end %>
-
-    <hr>
-
-    <div class="subcontainer">
-      <div class="row who">
-        <div class="spacer-mid"></div>
-        <div class='title'>
-          <h3>¿QUIÉNES SOMOS?</h3>
+      <div class="right-side">
+        <div class="title">¿CÓMO LOGRAMOS EL CAMBIO?</div>
+        <span class="caption">
+          <h3> Poder Ciudadano </h3>
+          <p> Involucramos a los ciudadanos en procesos de decisión política para que hagan valer su voto en los espacios democráticos. </p>
+        </span>
+        <span class="caption">
+          <h3> Compromiso Político </h3>
+          <p> Vinculamos a los políticos para que se comprometan a acatar las desiciones de sus votantes </p>
+        </span>
+      </div>
+    </section>
+    <section class="bottom-section-container">
+      <div class="title" id="who-are-we">¿ Quiénes SOMOS ?</div>
+      <div class="caption">
+        SeamOS es una plataforma ciudadana que busca<br>utilizar las TIC para actualizar la democracia.
+      </div>
+      <div id="buttons-container">
+        <div id="btn-1" class="btn square">
+          <h3>Qué pasa con tu voto</h3>
         </div>
-        <div class="spacer-small"></div>
-        <p>
-          SeamOS Democracia Digital es una plataforma ciudadana que busca promover el involucramiento de la
-          ciudadanía en instancias de poder, a través de herramientas digitales y análogas de creación
-          colectiva de procesos de incidencia política. La organización está integrada por un equipo
-          multidisciplinario, reunido con el interés de llevar creatividad e innovación al poder.
-          <br>
-          <br>
-          <strong>
-            Nuestra misión es involucrar a la ciudadanía en procesos de decisión política para que hagan
-            valer su voto en los espacios democráticos.
-          </strong>
-        </p>
-        <div class="spacer-mid"></div>
-
-        <div class="btn-container">
-          <a class="gray-fading-btn">
-            Nuestro equipo
-          </a>
+        <div id="btn-2" class="btn square">
+          <h3>Nuestra Historia</h3>
         </div>
+        <div id="btn-3" class="btn square">
+          <h3>Nuestro Equipo</h3>
+        </div>
+        <div id="btn-4" class="btn square">
+          <h3>Socios y aliados</h3>
+        </div>
+      </div>
+      <div>
+        <span id="info-1" class="info">
+          A través de SeamOS, podremos sentar un voto de opinión sobre las propuestas que se presentan en el Concejo de Bogota. Los representantes han firmado voluntariamente un manifiesto con el cual se comprometen a suscribir sus propuestas en la plataforma y actuar conforme a lo manifestado por los ciudadanos, y aunque el voto en SeamOS no podrá ir en contravía de la Ley de Bancadas, sí podemos asegurar que valdrá para activar conversaciones, afectar decisiones y fortalecer la democracia.
+        </span>
+        <span id="info-2" class="info">
+          En un país convulsionado por la guerra e invadido por la corrupción, nos juntamos unos jóvenes para convertir la indignación en acción. Como parte de una generación transformada por las nuevas tecnologías, nos dimos cuenta que la solución podía estar, literalmente, al alcance de nuestras manos, y es así que creamos una herramienta que volviera el poder a donde realmente corresponde: al ciudadano. Bienvenidos a SeamOS. En Colombia, la era de la democracia digital ha comenzado.
+        </span>
+        <span id="info-3" class="info">
+          <div class="team-members">
+            <div class="team-member one">
+              <div class="name">Nicolás<br class="breaker">Díaz</div>
+              <div class="profession">Politólogo</div>
+              <div class="role">Director</div>
+            </div>
+            <div class="team-member two">
+              <div class="name">Juan Carlos <br class="breaker">Rodríguez</div>
+              <div class="profession">Economista</div>
+              <div class="role">Administrativo</div>
+            </div>
+            <div class="team-member three">
+              <div class="name">Andrea <br class="breaker"><!-- react-text: 108 -->Mora</div>
+              <div class="profession">Internacionalista</div>
+              <div class="role">Outreach Político</div>
+            </div>
+            <div class="team-member four">
+              <div class="name">David <br class="breaker">Núñez</div>
+              <div class="profession">Politólogo</div>
+              <div class="role">Outreach Político</div>
+            </div>
+            <div class="team-member five">
+              <div class="name">Andrés <br class="breaker">Márquez</div>
+              <div class="profession">Abogado</div>
+              <div class="role">Outreach Político</div>
+            </div>
+            <div class="team-member six">
+              <div class="name">Alexander <br class="breaker">Quiceno</div>
+              <div class="profession">Ingeniero</div>
+              <div class="role">Programación</div>
+            </div>
+            <div class="team-member eight">
+              <div class="name">Karen <br class="breaker">Fonseca</div>
+              <div class="profession">Diseñadora Gráfica</div>
+              <div class="role">Comunicaciones</div>
+            </div>
+          </div>
+        </span>
+        <span id="info-4" class="info">
+          <div class="allies row">
+            <div class="ally one col-md-6"></div>
+            <div class="ally two col-md-6"></div>
+            <div class="ally three col-md-4"></div>
+            <div class="ally four col-md-4"></div>
+            <div class="ally five col-md-4"></div>
+            <div class="ally six col-md-6"></div>
+            <div class="ally seven col-md-6"></div>
+          </div>
+        </span>
+      </div>
+    </section>
+  </div>
+  <div id="homepage">
+    <div class="newsletter-container">
+      <div class="title">Suscríbete a nuestro newsletter</div>
+      <div class="newsletter">
+          <%= form_for(Subscription.new) do |form| %>
+            <div class="input-group">
+              <%= form.text_field :email, class: "form-control", placeholder: "correo" %>
+              <span class="input-group-btn">
+                <%= form.button "ENVIAR", class: "btn btn-secondary", type: 'submit'%>
+              </span>
+            </div>
+          <% end %>
       </div>
     </div>
-
-    <hr>
-
-    <!-- newsletter -->
-    <%= render partial: "layouts/partials/newsletter" %>
   </div>
 </span>
+
+
+
+

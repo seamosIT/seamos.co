@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.1'
+ruby '2.3.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use Puma as the app server
@@ -50,7 +50,6 @@ gem 'social-share-button'
 gem 'ckeditor'
 # gem "simple_discussion", :path => "/home/alexander/Documents/repos/forks/simple_discussion"
 gem "simple_discussion", github: "yonnyquiceno/simple_discussion"
-gem 'httparty'
 gem 'google-analytics-rails', '1.1.1'
 
 group :development, :test do

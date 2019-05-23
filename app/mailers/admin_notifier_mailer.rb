@@ -5,7 +5,7 @@ class AdminNotifierMailer < ApplicationMailer
     @email = email
     @unsubscribe = unsubscribe
     mail( :to => email,
-    :subject => 'Ahora estas suscrito al newsletter de SeamOS Buenaventura' )
+    :subject => 'Ahora estas suscrito al newsletter de SeamOS' )
   end
 
   def new_poll_created(poll, author, receiver)

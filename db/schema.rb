@@ -122,6 +122,18 @@ ActiveRecord::Schema.define(version: 20190311175726) do
     t.index ["user_id"], name: "index_pins_on_user_id", using: :btree
   end
 
+  create_table "poll_specs", force: :cascade do |t|
+    t.integer  "poll_id",                   null: false
+    t.string   "entry_key",                 null: false
+    t.text     "value",                     null: false
+    t.integer  "value_type",                null: false
+    t.boolean  "symbol_key", default: true, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["entry_key"], name: "index_poll_specs_on_entry_key", using: :btree
+    t.index ["poll_id"], name: "index_poll_specs_on_poll_id", using: :btree
+  end
+
   create_table "polls", force: :cascade do |t|
     t.string   "title",                          null: false
     t.text     "description",                    null: false

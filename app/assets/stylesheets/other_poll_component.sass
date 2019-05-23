@@ -3,9 +3,7 @@ $break-medium: 720px
   display: flex
   align-items: center
   margin-bottom: 25px
-  width: 95%
   @media screen and (max-width: $break-medium)
-    width: 100%
     margin-bottom: 12px
     justify-content: center
   .poll-my-vote
@@ -32,16 +30,18 @@ $break-medium: 720px
     display: inline-flex
     flex-wrap: wrap
     justify-content: center
+    width: 585px
     position: relative
     border: 2px solid gainsboro
     @media screen and (max-width: $break-medium)
       width: 88%
+      height: 105px
       margin: 07
       overflow: hidden
     .left-side
       overflow: hidden
     .right-side
-      padding: 15px
+      padding: 0
     .closed-ribbon
       width: 100%
       display: flex
@@ -63,6 +63,7 @@ $break-medium: 720px
         height: 24px
         background-size: 25px
     .poll-image-container
+      height: 160px
       position: relative
       overflow: hidden
       margin: auto
@@ -73,49 +74,37 @@ $break-medium: 720px
         height: auto
         overflow: hidden
       img
-        min-height: 260px
-        max-height: 270px
-        // @media screen and (max-width: $break-medium)
-
+        min-height: 200px
+        max-height: 210px
+        @media screen and (max-width: $break-medium)
+          max-height: auto
+          min-height: auto
+          width: 170%
     .color-separator
       height: 45px
       @media screen and (max-width: $break-medium)
         height: 16px
-    .poll-main-info
-      height: 92%
+    .poll-title
+      font-size: 20px
+      margin: 16px 0
+      font-family: 'RobotoCondensed'
+      font-weight: bold
+      line-height: 1em
+      text-align: left
+      color: #44424c
+      width: 100%
+      padding: 0 10px
+      position: absolute
+      height: 92px
       overflow: hidden
-      position: relative
-      .poll-title
-        font-size: 20px
-        margin: 16px 0
-        font-family: 'RobotoCondensed'
-        font-weight: bold
-        line-height: 1em
+      @media screen and (max-width: $break-medium)
         text-align: left
-        color: #44424c
-        width: 100%
-        padding: 0
-        max-height: 60px
+        font-size: 12px
+        height: 50px
+        position: relative
         overflow: hidden
-        @media screen and (max-width: $break-medium)
-          text-align: left
-          font-size: 16px
-          height: 50px
-          position: relative
-          overflow: hidden
-          width: 100%
-          margin: 8px 0
-      .poll-summary
-        margin-top: 10px
-        p
-          text-align: justify
-          font-size: 1rem
-          line-height: 1.2rem
-          color: gray
-          font-family: RobotoRegular
-          @media screen and (max-width: $break-medium)
-            font-size: 0.8rem
-            line-height: 1rem
+        width: 100%
+        margin: 8px 0
     .politician-info
       width: 100%
       display: flex
@@ -149,7 +138,7 @@ $break-medium: 720px
         font-size: 14px
         max-height: 80px
     .poll-infos-container
-      top: -110px
+      position: relative
       padding-top: 0
       width: 100%
       padding: 0 10px
@@ -173,16 +162,17 @@ $break-medium: 720px
         margin-top: 5px
         height: 46px
         position: absolute
-        bottom: 0
-        right: 4px
-        justify-content: flex-end
-        // @media screen and (max-width: $break-medium)
-
+        top: 100px
+        @media screen and (max-width: $break-medium)
+          height: 36px
+          bottom: -19px
+          top: auto
         .poll-tag-name
           color: #44424c
           font-size: 20px
           line-height: 23px
           text-align: left
+          width: 62%
           @media screen and (max-width: $break-medium)
             font-size: 12px
             line-height: 10px
@@ -195,8 +185,8 @@ $break-medium: 720px
             font-size: 12px
             color: gray
             @media screen and (max-width: $break-medium)
-              font-size: 9px
-              line-height: 9px
+              font-size: 7px
+              line-height: 7px
               color: gray
         .btn-plus-read
           color: white
