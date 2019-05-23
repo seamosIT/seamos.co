@@ -10,7 +10,7 @@ module PollsHelper
       },
       description: @poll.summary,
       type: "article",
-      site_name: "seamOS Bueanaventura"
+      site_name: "seamOS"
     }
 
     set_meta_tags article: {

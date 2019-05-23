@@ -7,28 +7,26 @@ development:
   adapter: postgresql
   pool: 5
   timeout: 5000
-  database: development_seamosbuenaventura
+  database: development_seamos
 
 test:
   adapter: postgresql
   pool: 5
   timeout: 5000
-  database: test_seamosbuenaventura
+  database: test_seamos
 
 production:
   adapter: postgresql
-  encoding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  encoding: unicode
+  port: 5432
+  host: localhost
+  database: <%= ENV['DATABASE_URL'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 staging:
   adapter: postgresql
-  encoding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  encoding: unicode
+  port: 5432
+  host: localhost
+  database: <%= ENV['DATABASE_URL'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

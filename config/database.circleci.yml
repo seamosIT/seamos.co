@@ -1,20 +1,20 @@
 development:
     adapter: postgresql
-    database: development_seamosbuenaventura
+    database: development_seamos
     encoding: utf8
     username: root
     password:
     host: localhost
 test: &test
     adapter: postgresql
-    database: test_seamosbuenaventura
+    database: test_seamos
     encoding: utf8
     username: root
     password:
     host: localhost
 production:
     adapter: postgresql
-    database: production_seamosbuenaventura
+    database: production_seamos
     encoding: utf8
     username: root
     password:

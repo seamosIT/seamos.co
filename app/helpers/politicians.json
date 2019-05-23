@@ -1,3 +1,98 @@
 [
-
+  {
+    "name": "Hollman Morris",
+    "party": "Progresistas",
+    "background_class": "p_one",
+    "production_id": 23
+  },
+  {
+    "name": "Juan Felipe Grillo",
+    "party": "Cambio Radical",
+    "background_class": "p_two",
+    "production_id": 10
+  },
+  {
+    "name": "Horacio José Serpa",
+    "party": "Partido Liberal",
+    "background_class": "p_three",
+    "production_id": 15
+  },
+  {
+    "name": "Lucía Bastidas",
+    "party": "Partido Alianza Verde",
+    "background_class": "p_four",
+    "production_id": 20
+  },
+  {
+    "name": "Diego Molano",
+    "party": "Centro Democrático",
+    "background_class": "p_five",
+    "production_id": 9
+  },
+  {
+    "name": "Angela Garzón",
+    "party": "Centro Democrático",
+    "background_class": "p_six",
+    "production_id": 11
+  },
+  {
+    "name": "Emel Rojas",
+    "party": "Movimiento Libres",
+    "background_class": "p_seven",
+    "production_id": 16
+  },
+  {
+    "name": "Daniel Palacios",
+    "party": "Centro Democrático",
+    "background_class": "p_eight",
+    "production_id": 18
+  },
+  {
+    "name": "Germán García",
+    "party": "Partido Liberal",
+    "background_class": "p_nine",
+    "production_id": 21
+  },
+  {
+    "name": "José David Castellanos",
+    "party": "Cambio Radical",
+    "background_class": "p_ten",
+    "production_id": 19
+  },
+  {
+    "name": "Yefer Vega",
+    "party": "Cambio Radical",
+    "background_class": "p_eleven",
+    "production_id": 31
+  },
+  {
+    "name": "María Clara Name",
+    "party": "Partido Alianza Verde",
+    "background_class": "p_twelve",
+    "production_id": 17
+  },
+  {
+    "name": "Manuel Sarmiento",
+    "party": "Polo Democrático Alternativo",
+    "background_class": "p_thirteen",
+    "production_id": 1616
+  },
+  {
+    "name": "María Fernanda Rojas",
+    "party": "Partido Alianza Verde",
+    "background_class": "p_fourteen",
+    "production_id": 1688
+  },
+  {
+    "name": "Armando Gutiérrez",
+    "party": "Partido Liberal",
+    "background_class": "p_fiveteen",
+    "production_id": 1690
+  },
+  {
+    "name": "Celio Nieves",
+    "party": "Polo Democrático Alternativo",
+    "background_class": "p_sixteen",
+    "production_id": 1689
+  }
 ]

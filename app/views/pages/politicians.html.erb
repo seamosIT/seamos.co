@@ -1,14 +1,18 @@
-<div id="politician-profile">
-  <div id="top-color-banner">
-    <h1>Concejales</h1>
+<div id="politicians">
+  <div class="row politicians-banner one">
+    <div class="one-caption">¿Qué concejales participan?</div>
+  </div>
+  <div class="row">
+    <div class="politicians">
+      <% @politicians.each do |politician| %>
+        <%= link_to politician_profile_path(politician["production_id"]), class: 'politician-link' do %>
+          <div class="politician <%= politician["background_class"] %>">
+            <div class="photo"></div>
+            <div class="name"><%= politician["name"] %></div>
+            <div class="organization"><%= politician["party"] %></div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
-<% if @politicians.any? %>
-  <div id='politicians' class="subcontainer">
-    <section class="row">
-      <div class="col-12">
-      </div>
-      <%= render partial: "layouts/partials/politicians", locals: {politicians: @politicians} %>
-    </section>
-  </div>
-<% end %>
