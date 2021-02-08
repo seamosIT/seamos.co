@@ -29,7 +29,7 @@ gem 'bootstrap', '~> 4.3.1'
 # #### project gems ####
 # gem 'rails-i18n', '~> 5.0.0' # For 5.0.x
 gem 'bootstrap-datepicker-rails', '~> 1.6.4.1'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 2.1.1'
 gem 'carrierwave-base64', '~> 2.3.2'
 gem 'mini_magick'
 gem 'fog-aws', '~> 0.12.0'
